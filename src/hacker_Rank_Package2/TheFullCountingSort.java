@@ -2,6 +2,7 @@ package hacker_Rank_Package2;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 // https://www.hackerrank.com/challenges/full-counting-sort/problem
 // Full Counting Sort
@@ -37,7 +38,8 @@ public class TheFullCountingSort {
 		for(int i = 0; i < half; i++) {
 			arr.get(i).set(1, "-");
 		}
-		arr = arr.stream().sorted((a, b) -> Integer.parseInt(a.get(0)) - Integer.parseInt(b.get(0))).collect(java.util.stream.Collectors.toList());
+		arr = arr.stream().sorted((a, b) -> Integer.parseInt(a.get(0)) - Integer.parseInt(b.get(0)))
+									.collect(Collectors.toList());
 		StringBuilder sb = new StringBuilder();
 		for (List<String> list : arr) {
 			sb.append(list.get(1)).append(" ");
@@ -47,11 +49,26 @@ public class TheFullCountingSort {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<List<String>> arr = Arrays.asList(Arrays.asList("0", "ab"), Arrays.asList("6", "cd"), Arrays.asList("0", "ef"), Arrays.asList("6", "gh"),
-				Arrays.asList("4", "ij"), Arrays.asList("0", "ab"), Arrays.asList("6", "cd"), Arrays.asList("0", "ef"), Arrays.asList("6", "gh"),
-				Arrays.asList("0", "ij"), Arrays.asList("4", "that"), Arrays.asList("3", "be"), Arrays.asList("0", "to"), Arrays.asList("1", "be"),
-				Arrays.asList("5", "question"), Arrays.asList("1", "or"), Arrays.asList("2", "not"), Arrays.asList("4", "is"),
-				Arrays.asList("2", "to"), Arrays.asList("4", "the"));
+		List<List<String>> arr = Arrays.asList(	Arrays.asList("0", "ab"), 
+												Arrays.asList("6", "cd"), 
+												Arrays.asList("0", "ef"), 
+												Arrays.asList("6", "gh"),
+												Arrays.asList("4", "ij"), 
+												Arrays.asList("0", "ab"), 
+												Arrays.asList("6", "cd"), 
+												Arrays.asList("0", "ef"), 
+												Arrays.asList("6", "gh"),
+												Arrays.asList("0", "ij"), 
+												Arrays.asList("4", "that"), 
+												Arrays.asList("3", "be"), 
+												Arrays.asList("0", "to"), 
+												Arrays.asList("1", "be"),
+												Arrays.asList("5", "question"), 
+												Arrays.asList("1", "or"), 
+												Arrays.asList("2", "not"), 
+												Arrays.asList("4", "is"),
+												Arrays.asList("2", "to"), 
+												Arrays.asList("4", "the"));
 		countSort(arr);
 	}
 
