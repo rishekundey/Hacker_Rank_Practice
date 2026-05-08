@@ -37,25 +37,33 @@ public class AnagramTest {
 		for (char c : secondHalf.toCharArray()) {
 			charCount[c - 'a']--;
 		}
-
+		
+		for (int count : charCount) {
+			System.out.print(count + " ");
+		}
+		
+		System.out.println();
+		
 		int changesNeeded = 0;
 		for (int count : charCount) {
 			if (count > 0) {
 				changesNeeded += count;
 			}
 		}
-
+		
 		return changesNeeded;
 		
 	    }
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(anagram("aaabbb")); // Output: 3
-		System.out.println(anagram("ab"));     // Output: 1
-		System.out.println(anagram("abc"));    // Output: -1
-		System.out.println(anagram("mnop"));   // Output: 2
-		
+		//System.out.println(anagram("aaabbb")); // Output: 3
+		//System.out.println(anagram("ab"));     // Output: 1
+		//System.out.println(anagram("abc"));    // Output: -1
+		//System.out.println(anagram("mnop"));   // Output: 2
+		System.out.println(anagram("asdfjoieufoa")); //asdfjo and ieufoa -> adfjos and aefiou -> 3
+		System.out.println(anagram("fdhlvosfpafhalll"));
+		System.out.println(anagram("mvdalvkiopaufl")); //mvdalvk and iopaufl -> adklmvv and afilopu -> 5
 	}
 
 }
