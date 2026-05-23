@@ -5,7 +5,8 @@ import java.math.BigInteger;
 // The Fibonacci sequence is defined by the recurrence relation:
 // F(n) = F(n-1) + F(n-2)
 // with seed values F(0) = 0 and F(1) = 1.
-// Given three integers t1, t2 and n, find the value of Tn where Tn is defined by the following recurrence relation:
+// Given three integers t1, t2 and n, find the value of Tn where Tn is defined by the 
+// following recurrence relation:
 // T(n) = T(n-2) + (T(n-1))^2
 // with seed values T(1) = t1 and T(2) = t2.
 // Example
