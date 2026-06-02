@@ -2,18 +2,36 @@ package hacker_Rank_Package2;
 
 import java.math.BigInteger;
 
-// The Fibonacci sequence is defined by the recurrence relation:
-// F(n) = F(n-1) + F(n-2)
-// with seed values F(0) = 0 and F(1) = 1.
-// Given three integers t1, t2 and n, find the value of Tn where Tn is defined by the 
-// following recurrence relation:
-// T(n) = T(n-2) + (T(n-1))^2
-// with seed values T(1) = t1 and T(2) = t2.
-// Example
-// t1 = 0
-// t2 = 1
-// n = 5
-// The sequence is 0, 1, 1, 2, 5. T(5) = 5.
+/*
+ * The Fibonacci sequence is defined as follows:
+ * F(0) = 0
+ * F(1) = 1
+ * F(n) = F(n-2) + F(n-1) for n > 1
+ * Given three integers, t1, t2, and n, where t1 and t2 are the first two terms of a modified Fibonacci sequence, find the nth term of this modified sequence.
+ * The modified Fibonacci sequence is defined as follows:
+ * F(0) = t1
+ * F(1) = t2
+ * F(n) = F(n-2) + (F(n-1))^2 for n > 1
+ * Function Description
+ * Complete the fibonacciModified function in the editor below. It should return the nth term of the modified Fibonacci sequence.
+ * fibonacciModified has the following parameter(s):
+ * - int t1: the first term of the sequence
+ * - int t2: the second term of the sequence
+ * - int n: the term to compute and return
+ * Returns
+ * - int: the nth term of the modified Fibonacci sequence
+ * Input Format
+ * A single line of three space-separated integers describing the respective values of t1, t2, and n.
+ * Constraints
+ * - 0 <= t1, t2 <= 2
+ * - 3 <= n <= 20
+ * Sample Input
+ * 0 1 5
+ * Sample Output
+ * 5
+ * Explanation Video: https://www.youtube.com/watch?v=H8b9rGQYp3o
+ * 
+ */
 
 
 public class FibonacciModified {
