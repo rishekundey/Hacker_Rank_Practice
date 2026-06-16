@@ -1,4 +1,4 @@
-package hacker_Rank_Pacakge;
+package hacker_Rank_Package2;
 
 
 import java.io.*;
