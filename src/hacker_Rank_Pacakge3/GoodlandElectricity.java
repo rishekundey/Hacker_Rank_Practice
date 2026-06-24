@@ -60,11 +60,11 @@ public class GoodlandElectricity {
 			//System.out.println("i: "+i);
 			int j=Math.min(i+k-1, size-1);
 			//System.out.println("j: "+j);
-			while (j >= i && arr.get(j) == 0) {
+			while (j >= i-(k-1) && j >= 0 && arr.get(j) == 0) {
 				j--;
 			}
 			//System.out.println("j after while: "+j);
-			if (j < i) {
+			if (j < i-(k-1)) {
 				return -1;
 			}
 			count++;
