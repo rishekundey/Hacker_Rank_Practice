@@ -72,7 +72,10 @@ class DoublyLinkedListPrintHelper {
 		while (node != null) {
 			System.out.println(node.data);
 			node = node.next;
+			if (node != null) 
+				System.out.print(" -> ");
 		}
+		System.out.println(); // Print a newline after printing the entire list
 	}
 }
 

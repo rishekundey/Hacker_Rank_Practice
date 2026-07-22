@@ -65,9 +65,12 @@ public class ReverseALinkedList {
 	 */
 	public static void printSinglyLinkedList(SinglyLinkedListNode node){
 		while (node != null) {
-			System.out.println(node.data); // Print the data of the current node
+			System.out.print(node.data); // Print the data of the current node
 			node = node.next; // Move to the next node in the list
+			if (node != null) 
+				System.out.print(" -> ");
 		}
+		System.out.println(); // Print a newline after printing the entire list
     }
 	
 	/*
